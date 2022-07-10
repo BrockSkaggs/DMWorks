@@ -1,0 +1,149 @@
+﻿<Window x:Class="DMWorks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DMWorks"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextBlock.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        mc:Ignorable="d"
+        Title="DMWorks" Height="800" Width="1200">
+    <Grid Margin="2,2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="125"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="DMWorks" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" />
+
+        <TabControl Grid.Row="1" HorizontalAlignment="Stretch" >
+            <TabItem Header="Search Definition">
+                <Grid Margin="2,2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3">
+                        <Button Content="Define Search Directory" Command="{Binding DefineSearchDirectoryCommand}" Height="25" HorizontalAlignment="Left" Margin="0,0,10,0"/>
+                        <TextBlock Text="{Binding SearchDirPath}" VerticalAlignment="Center"/>
+                    </StackPanel>
+
+                    <GroupBox Grid.Row="2" Header="Search Settings">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="120"/>
+
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="120"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="File Type" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Row="0" Grid.Column="1" ItemsSource="{Binding FileTypes}" SelectedItem="{Binding SelectedFileType}" Width="75" HorizontalAlignment="Left"/>
+
+                            <TextBlock Grid.Row="0" Grid.Column="2" Text="Result Units" VerticalAlignment="Center"/>
+                            <ComboBox Grid.Row="0" Grid.Column="3" ItemsSource="{Binding UnitOptions}" SelectedItem="{Binding SelectedUnitOption}" Width="75" HorizontalAlignment="Left"></ComboBox>
+                            <CheckBox Grid.Row="0" Grid.Column="4" Content="Check Dates" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding CheckDates}"/>
+                            <TextBlock Grid.Row="0" Grid.Column="5" VerticalAlignment="Center" Text="Valid Start Date"/>
+                            <DatePicker Grid.Row="0" Grid.Column="6" SelectedDate="{Binding ValidStartDate}" Width="100" HorizontalAlignment="Left" IsEnabled="{Binding CheckDates}"/>
+
+                            <TextBlock Grid.Row="0" Grid.Column="7" VerticalAlignment="Center" Text="Valid End Date" />
+                            <DatePicker Grid.Row="0" Grid.Column="8" SelectedDate="{Binding ValidEndDate}" Width="100" HorizontalAlignment="Left" IsEnabled="{Binding CheckDates}"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,5">
+            <Button Content="Run Search" Command="{Binding RunSearchCommand}" HorizontalAlignment="Left"/>
+            <Button Content="Export To MS Excel" Margin="10,0" Command="{Binding ExportExcelCommand}"/>
+            <TextBlock Grid.Row="2" Text="{Binding ProcessUpdate}" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <TabControl Grid.Row="5">
+            <TabItem Header="Parts">
+                <Grid Margin="5,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"  Text="File Properties" FontWeight="DemiBold"/>
+                    <DataGrid Grid.Row="1" ItemsSource="{Binding PartReports}" SelectedItem="{Binding SelectedPartReport}" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding FileName}" Header="File"/>
+                            <DataGridTextColumn Binding="{Binding CreationDate}" Header="Creation Date"/>
+                            <DataGridTextColumn Binding="{Binding LastSaveDate}" Header="Last Save Date"/>
+                            <DataGridTextColumn Binding="{Binding SavedBy}" Header="Saved By"/>
+                            <DataGridCheckBoxColumn Binding="{Binding DateViolation}" Header="Date Violation"/>
+                            <DataGridTextColumn Binding="{Binding CreationMatchId}" Header="Creation Match ID"/>
+                            <DataGridTextColumn Binding="{Binding SaveMatchId}" Header="Save Match ID"/>
+                            <DataGridTextColumn Binding="{Binding CreationSaveMatchId}" Header="Creation &amp; Save Match ID"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="2" Background="LightGray" Margin="0,-1,0,0" ResizeBehavior="CurrentAndNext" ResizeDirection="Rows"/>
+
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Stretch">
+                            <TextBlock Text="Configurations" FontWeight="DemiBold"/>
+                            <DataGrid ItemsSource="{Binding SelectedPartReport.ConfigDetails}" SelectedItem="{Binding SelectedConfigDetail}" AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,-2,0">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Name}" Header="Name"/>
+                                    <DataGridTextColumn Binding="{Binding Material}" Header="Material"/>
+                                    <DataGridTextColumn Binding="{Binding Mass_user_note}" Header="Mass"/>
+                                    <DataGridTextColumn Binding="{Binding Volume_user_note}" Header="Volume"/>
+                                    <DataGridTextColumn Binding="{Binding CenterOfMass_user_note}" Width="*" Header="Center Of Mass"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+
+                        <GridSplitter Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Stretch" Width="2" Background="LightGray" Margin="-1,0,0,0" ResizeBehavior="CurrentAndNext" ResizeDirection="Columns"/>
+
+                        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Stretch">
+                            <TextBlock Text="Features" FontWeight="DemiBold"/>
+                            <DataGrid ItemsSource="{Binding SelectedConfigDetail.FeatureDetails}" AutoGenerateColumns="False" IsReadOnly="True">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Binding="{Binding Name}" Header="Name"/>
+                                    <DataGridTextColumn Binding="{Binding CreatedBy}" Header="Created By"/>
+                                    <DataGridTextColumn Binding="{Binding CreationDate}" Header="Creation Date"/>
+                                    <DataGridTextColumn Binding="{Binding ModifiedDate}" Header="Modified Date"/>
+                                    <DataGridTextColumn Binding="{Binding Description}" Header="Description"/>
+                                    <DataGridCheckBoxColumn Binding="{Binding IsSketch}" Header="Is Sketch?"/>
+                                    <DataGridTextColumn Binding="{Binding SketchStatus}" Width="*" Header="Sketch Status"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+
+
+    </Grid>
+</Window>
