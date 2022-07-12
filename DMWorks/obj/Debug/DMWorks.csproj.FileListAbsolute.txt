@@ -38,3 +38,4 @@ C:\Users\brock\Documents\SKAGGS\Consulting\Client Outreach\DataMineWorks\DMWorks
 C:\Users\brock\Documents\SKAGGS\Consulting\Client Outreach\DataMineWorks\DMWorks\DMWorks\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\brock\Documents\SKAGGS\Consulting\Client Outreach\DataMineWorks\DMWorks\DMWorks\bin\Debug\Microsoft.WindowsAPICodePack.xml
 C:\Users\brock\Documents\SKAGGS\Consulting\Client Outreach\DataMineWorks\DMWorks\DMWorks\bin\Debug\Microsoft.WindowsAPICodePack.Shell.xml
+C:\Users\brock\Documents\SKAGGS\Consulting\Client Outreach\DataMineWorks\DMWorks\DMWorks\obj\Debug\DMWorks_Content.g.cs
