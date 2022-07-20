@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="Logo.svg">
+   sodipodi:docname="DMWorks_Logo.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -31,8 +31,8 @@
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -55,7 +55,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -65,38 +65,36 @@
      id="layer1"
      transform="translate(-73.926869,-120.11341)">
     <g
-       id="g2624"
-       transform="matrix(0.77781746,0.77781746,-0.77781746,0.77781746,133.73389,-43.179263)"
-       style="opacity:0.29300005">
+       id="g847">
       <path
          sodipodi:nodetypes="ccccccc"
          inkscape:connector-curvature="0"
          id="path4552"
-         d="m 99.21875,125.02083 c -5.290989,0.16226 -12.525321,2.94281 -17.197917,6.48229 5.056161,-1.14032 11.182801,-2.43454 17.330209,-2.51354 1.455208,0.52917 2.513538,0.46302 3.836458,0 6.61458,0.0662 11.90625,1.45522 17.19792,2.64584 -4.6726,-3.53948 -11.77464,-6.45233 -17.19792,-6.61459 -1.43355,0.43128 -2.64283,0.3243 -3.96875,0 z"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         d="m 113.66458,131.2382 c -4.24163,-3.98922 -12.03138,-7.45345 -18.418877,-8.3348 4.819727,3.04581 10.591807,6.80455 15.434817,11.52466 0.72029,1.54348 1.59493,2.31522 2.98406,2.98406 5.09345,5.19643 8.129,10.39279 11.31886,15.43483 -0.88136,-6.3875 -4.13978,-14.17726 -8.2319,-18.52179 -1.45049,-0.77958 -2.30788,-1.80339 -3.08696,-3.08696 z"
+         style="fill:none;stroke:#000000;stroke-width:0.29104164px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
       <path
          sodipodi:nodetypes="cccccc"
          inkscape:connector-curvature="0"
          id="path869"
-         d="m 99.21875,128.99662 -10e-7,43.52396 h 3.968751 l -0.0661,-43.52396 c -0.99223,0.66146 -2.84432,0.66146 -3.90261,0 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         d="m 110.57214,134.33064 -33.853694,33.85369 3.086964,3.08697 33.80228,-33.90511 c -1.28627,-0.25728 -2.72685,-1.69787 -3.03552,-3.03552 z"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.29149997;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
          id="path865"
-         d="m 99.21875,125.01129 -10e-7,-1.45521 h 3.968751 v 1.45521 c -1.43355,0.56358 -2.64283,0.4566 -3.96875,0 z"
-         style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="77.208183"
-       y="149.36406"
-       id="text2619"><tspan
-         sodipodi:role="line"
-         id="tspan2617"
-         x="77.208183"
+         d="m 113.672,131.23078 1.13189,-1.13189 3.08696,3.08696 -1.13188,1.13189 c -1.55341,-0.67668 -2.4108,-1.70049 -3.08697,-3.08696 z"
+         style="fill:none;stroke:#000000;stroke-width:0.29104164px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <text
+         id="text2619"
          y="149.36406"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944466px;font-family:'BankGothic Md BT';-inkscape-font-specification:'BankGothic Md BT';stroke-width:0.26458332">DMWorks</tspan></text>
+         x="77.208183"
+         style="font-style:normal;font-weight:normal;font-size:4.93888855px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.81944466px;font-family:'BankGothic Md BT';-inkscape-font-specification:'BankGothic Md BT';stroke-width:0.26458332"
+           y="149.36406"
+           x="77.208183"
+           id="tspan2617"
+           sodipodi:role="line">DMWorks</tspan></text>
+    </g>
   </g>
 </svg>
